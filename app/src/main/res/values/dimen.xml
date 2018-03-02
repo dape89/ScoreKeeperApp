@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_top">16dp</dimen>
+    <dimen name="text_team">24sp</dimen>
+    <dimen name="text_score">56sp</dimen>
+    <dimen name="margin">24dp</dimen>
+    <dimen name="margin_top_button">8dp</dimen>
+    <dimen name="margin_shots">92dp</dimen>
+    <dimen name="width_linearlayout">0dp</dimen>
+    <dimen name="width_view">1dp</dimen>
+</resources>

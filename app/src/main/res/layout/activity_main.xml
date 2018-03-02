@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="?attr/dividerVertical"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="@dimen/width_linearlayout"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:divider="?attr/dividerVertical"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="@string/team_a"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/text_team"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/team_a_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="@string/score_a"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/text_score"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                android:onClick="addOneForTeamA"
+                android:text="@string/goal"
+                android:background="@color/colorText"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="@dimen/margin_top_button"
+                android:onClick="addOnGoalForTeamA"
+                android:text="@string/shots_on_goal"
+                android:background="@color/colorText"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="@dimen/margin_top_button"
+                android:layout_marginBottom="@dimen/margin"
+                android:onClick="addOffGoalForTeamA"
+                android:text="@string/shots_off_goal"
+                android:background="@color/colorText"
+                android:textColor="@color/colorPrimaryDark"/>
+        </LinearLayout>
+        <View android:layout_width="@dimen/width_view"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_top"
+            android:background="@color/colorText"/>
+        <LinearLayout
+            android:layout_width="@dimen/width_linearlayout"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="@string/team_b"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/text_team"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/team_b_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="@string/score_b"
+                android:textColor="@color/colorText"
+                android:textSize="@dimen/text_score"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                android:onClick="addOneForTeamB"
+                android:text="@string/goal"
+                android:background="@color/colorText"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="@dimen/margin_top_button"
+                android:onClick="addOnGoalForTeamB"
+                android:text="@string/shots_on_goal"
+                android:background="@color/colorText"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="@dimen/margin_top_button"
+                android:layout_marginBottom="@dimen/margin"
+                android:onClick="addOffGoalForTeamB"
+                android:text="@string/shots_off_goal"
+                android:background="@color/colorText"
+                android:textColor="@color/colorPrimaryDark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin"
+        android:onClick="reset"
+        android:text="@string/new_match"
+        android:background="@color/colorText"
+        android:textColor="@color/colorPrimaryDark"
+        android:id="@+id/new_match" />
+
+    <TextView
+        android:id="@+id/ongoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_top"
+        android:text="@string/shots_on_goal"
+        android:textColor="@color/colorText" />
+
+    <TextView
+        android:id="@+id/offgoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ongoal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_top_button"
+        android:text="@string/shots_off_goal"
+        android:textColor="@color/colorText" />
+
+    <TextView
+        android:id="@+id/onGoalA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginLeft="@dimen/margin_shots"
+        android:layout_marginTop="@dimen/margin_top"
+        android:text="@string/shots_on_goal_a"
+        android:textColor="@color/colorText" />
+
+    <TextView
+        android:id="@+id/offGoalA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/offgoal"
+        android:layout_marginLeft="@dimen/margin_shots"
+        android:text="@string/shots_off_goal_a"
+        android:textColor="@color/colorText" />
+
+    <TextView
+        android:id="@+id/onGoalB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ongoal"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_shots"
+        android:text="@string/shots_on_goal_b"
+        android:textColor="@color/colorText" />
+
+    <TextView
+        android:id="@+id/offGoalB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/offgoal"
+        android:layout_marginRight="@dimen/margin_shots"
+        android:text="@string/shots_off_goal_b"
+        android:textColor="@color/colorText" />
+</RelativeLayout>
